@@ -1,0 +1,30 @@
+print('a - сортування по алфавіту\nb - визначення найдовшого слова')
+a = input('Ваш вибір: ')
+if a == 'a':
+    while True:
+        alf = input('Введіть слова:')
+        word = alf.split()
+        word.sort()
+        print(word)
+        print('a - Вийти\nb - Продовжити')
+        k = input('Ваш вибір: ')
+        if k == 'b':
+            continue
+        elif k == 'a':
+            print('Вихід з програми...')
+            break
+elif a == 'b':
+    while True:
+        world = input('Введіть слова:')
+        a = max(world.split(), key=len)
+        print('Найдовше слово ', a)
+        print('a - Вийти\nb - Продовжити')
+        vubor = input('Ваш вибір: ')
+        if vubor == 'b':
+            continue
+        elif vubor == 'a':
+            print('Вихід з програми...')
+            break
+else:
+    print('Неправильний вибір')
+    
