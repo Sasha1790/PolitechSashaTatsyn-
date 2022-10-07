@@ -1,0 +1,40 @@
+a = 'АБВГҐДЕЄЖИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯABCDEFGHIJKLMNOPQRSTUV1234567890'
+while True:
+    print('a - шифрування\nb - дешефрування')
+    k = input('Ваш вибір: ')
+    if k == 'a':
+        slovo = input('Слово: ').upper()
+        res = ''
+        for i in slovo:
+            nahodgena = a.find(i)
+            new_nahodgena = nahodgena + 1
+            if i in a:
+                res += a[new_nahodgena]
+            else:
+                res += i
+        print(res)
+        print('a - Вийти\nb - Продовжити')
+        k = input('Ваш вибір: ')
+        if k == 'b':
+            continue
+        elif k == 'a':
+            print('Вихід з програми...')
+            break
+    else:
+        slovo = input('Слово: ').upper()
+        res = ''
+        for i in slovo:
+            nahodgena = a.find(i)
+            new_nahodgena = nahodgena - 1
+            if i in a:
+                res += a[new_nahodgena]
+            else:
+                res += i
+        print(res)
+        print('a - Вийти\nb - Продовжити')
+        k = input('Ваш вибір: ')
+        if k == 'b':
+            continue
+        elif k == 'a':
+            print('Вихід з програми...')
+            break
