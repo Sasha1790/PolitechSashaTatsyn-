@@ -1,0 +1,65 @@
+print('a - сортування по алфавіту\nb - визначення найдовшого слова\nc - повторювання слів')
+a = input('Ваш вибір: ')
+if a == 'a':
+    while True:
+        alf = input('Введіть слова:')
+        unique_words = []
+        word = alf.split()
+        word.sort()
+        for i in word:
+            if i in unique_words:
+                continue
+            else:
+                unique_words.append(i)
+        unique_words.sort()
+        print(unique_words)
+        print('a - Вийти\nb - Продовжити')
+        k = input('Ваш вибір: ')
+        if k == 'b':
+            continue
+        elif k == 'a':
+            print('Вихід з програми...')
+            break
+elif a == 'b':
+    while True:
+        world = input('Введіть слова:')
+        unique_words = []
+        a = max(world.split(), key=len)
+        print('Найдовше слово ', a)
+        print('a - Вийти\nb - Продовжити')
+        vubor = input('Ваш вибір: ')
+        if vubor == 'b':
+            continue
+        elif vubor == 'a':
+            print('Вихід з програми...')
+            break
+elif a == 'c':
+    while True:
+        def word_count(str):
+            counts = dict()
+            words = str.split()
+
+            for word in words:
+                if word in counts:
+                    counts[word] += 1
+                else:
+                    counts[word] = 1
+
+            return counts
+
+
+        text = input("Слова: ")
+        print(word_count(text))
+        print('a - Вийти\nb - Продовжити')
+        vubor = input('Ваш вибір: ')
+        if vubor == 'b':
+            continue
+        elif vubor == 'a':
+            print('Вихід з програми...')
+            break
+
+
+
+
+else:
+    print('Неправильний вибір')
